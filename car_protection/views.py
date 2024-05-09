@@ -8,5 +8,5 @@ def welcome(request):
 
 def my_redirect_view(request):
     # Define the URL you want to redirect to
-    redirect_url = "/authorization"
+    redirect_url = "authorization"
     return redirect(redirect_url)

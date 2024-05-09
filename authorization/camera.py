@@ -132,7 +132,7 @@ class VideoCamera(object):
         # Set the subject and body of the email
         subject = 'Check out my new video!'
         body = """
-        a1c8-2409-40f4-1019-8bc1-74b7-ca1e-4596-7e71.ngrok-free.app/monitor/
+        authorization/
         """
 
         em = EmailMessage()

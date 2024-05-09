@@ -24,6 +24,7 @@ class VideoCamera(object):
         
         # Perform object detection
         results = self.model_yolo(frame)
+        print(frame)
         
         for result in results:
             # Extract bounding box information
