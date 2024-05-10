@@ -10,8 +10,6 @@ import pygame
 import smtplib
 import ssl
 from email.message import EmailMessage
-import pywhatkit
-import pyautogui
 from pynput.keyboard import Key, Controller
 from django.http import HttpResponseRedirect
 from django.urls import reverse
