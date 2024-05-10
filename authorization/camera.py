@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import pickle
 from keras_facenet import FaceNet
 import time
-import winsound
+import pygame
 import smtplib
 import ssl
 from email.message import EmailMessage
@@ -116,12 +116,19 @@ class VideoCamera(object):
     def __del__(self):
         self.video.release()
 
+    def beeep(self,frequency, duration):
+        pygame.mixer.init()
+        sound = pygame.mixer.Sound(frequency)
+        sound.play()
+        time.sleep(duration / 1000.0)
+        pygame.mixer.stop()
+
     def beep(self):
         # Implement your beep sound function here
         print("Beep sound triggered")
         self.send_notifications()
         for _ in range(5):  # Repeat the beep sound 5 times
-            winsound.Beep(1000, 500)  # Beep at 1000 Hz for 500 milliseconds
+            self.beeep(1000, 500)  # Beep at 1000 Hz for 500 milliseconds
 
     def send_notifications(self):
         # Define email sender and receiver
