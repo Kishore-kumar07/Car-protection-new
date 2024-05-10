@@ -113,7 +113,7 @@ class VideoCamera(object):
 
     def beeep(self,frequency, duration):
         pygame.mixer.init()
-        sound = pygame.mixer.Sound(frequency)
+        sound = pygame.mixer.Sound('templates/beep.wav')
         sound.play()
         time.sleep(duration / 1000.0)
         pygame.mixer.stop()
