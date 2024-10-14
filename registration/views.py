@@ -71,7 +71,7 @@ def capture_frames_from_camera(request):
             cv2.imwrite(frame_filename, frame)
             print(f'Frame {frame_count} saved as {frame_filename}')
 
-        if frame_count >=500:
+        if frame_count >=2000:
             break
     
     # Release the capture
